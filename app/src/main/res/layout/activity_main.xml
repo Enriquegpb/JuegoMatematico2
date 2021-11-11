@@ -73,4 +73,16 @@
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="364dp" />
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:background="@drawable/toggle_opcion"
+        android:textOff=""
+        android:textOn=""
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="364dp" /
+    >
+
 </androidx.constraintlayout.widget.ConstraintLayout>
