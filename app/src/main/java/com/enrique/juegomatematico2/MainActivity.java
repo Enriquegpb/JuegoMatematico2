@@ -6,16 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
     Button btnrd;
     TextView tv;
+    //ToggleButton tgbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnrd=(Button) findViewById(R.id.btnrandom);
         tv=(TextView) findViewById(R.id.anio);
+       // tgbtn=(ToggleButton) findViewById(R.id.toggleButton);
 
         btnrd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     public boolean comprobar_bisiesto(String opc, int anio){
         if(opc.equals("yes")&& (anio % 4 == 0) && ((anio % 100 != 0) || (anio % 400 == 0))) return true;

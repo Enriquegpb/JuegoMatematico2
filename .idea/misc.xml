@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/kiketazo/AndroidStudioProjects/JuegoMatematico2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15555555555555556" />
+        <entry key="..\:/Users/kiketazo/AndroidStudioProjects/JuegoMatematico2/app/src/main/res/drawable/toggle_button.xml" value="0.1" />
         <entry key="..\:/Users/kiketazo/AndroidStudioProjects/JuegoMatematico2/app/src/main/res/drawable/toggle_opcion.xml" value="0.1" />
-        <entry key="..\:/Users/kiketazo/AndroidStudioProjects/JuegoMatematico2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/kiketazo/AndroidStudioProjects/JuegoMatematico2/app/src/main/res/layout/activity_main.xml" value="0.152" />
       </map>
     </option>
   </component>
