@@ -1,20 +1,22 @@
 package com.enrique.juegomatematico2;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
     Button btnrd,btnresultado;
     TextView tv,tvr;
     RadioButton rd1,rd2;
     Switch sw;
+    ConstraintLayout cl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         rd1=(RadioButton) findViewById(R.id.yes);
         rd2=(RadioButton) findViewById(R.id.NO);
         sw=(Switch)findViewById(R.id.switch1);
+        cl=(ConstraintLayout)findViewById(R.id.contenedor);
         btnrd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,10 +60,16 @@ public class MainActivity extends AppCompatActivity {
         sw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              if (sw.isChecked())
+              if (sw.isChecked()){
                   sw.setText("on");
-              else
+                  sw.setBackgroundColor(Color.GRAY);
+                  cl.setBackgroundColor(Color.YELLOW);
+              }
+              else{
                   sw.setText("off");
+                  sw.setBackgroundColor(Color.WHITE);
+                  cl.setBackgroundColor(Color.WHITE);
+              }
             }
         });
     }
