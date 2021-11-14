@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnrd,btnresultado;
     TextView tv,tvr;
     RadioButton rd1,rd2;
-    ToggleButton tgbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         tvr=(TextView) findViewById(R.id.Resultado);
         rd1=(RadioButton) findViewById(R.id.yes);
         rd2=(RadioButton) findViewById(R.id.NO);
-       tgbtn=(ToggleButton) findViewById(R.id.toggleButton);
 
         btnrd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,12 +50,6 @@ public class MainActivity extends AppCompatActivity {
                         tvr.setText("Incorrecto");
                     }
                 }
-            }
-        });
-        tgbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //cambiar color de fondo
             }
         });
     }
