@@ -68,8 +68,8 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="73dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="8dp"
         android:text="Resultado"
         app:layout_constraintBottom_toTopOf="@+id/Resultado"
         app:layout_constraintStart_toStartOf="parent" />
@@ -91,8 +91,8 @@
         android:id="@+id/Resultado"
         android:layout_width="100dp"
         android:layout_height="35dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="212dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="184dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

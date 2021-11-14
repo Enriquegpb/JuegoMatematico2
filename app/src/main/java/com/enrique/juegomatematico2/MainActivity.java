@@ -40,11 +40,10 @@ public class MainActivity extends AppCompatActivity {
                     tvr.setText("Debes introducir alguna opc");
             }
         });
-
         tgbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //cambiar color de fondo
             }
         });
     }
