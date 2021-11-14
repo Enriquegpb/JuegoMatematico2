@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnrd,btnresultado;
     TextView tv,tvr;
     RadioButton rd1,rd2;
-    //ToggleButton tgbtn;
+    ToggleButton tgbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         tvr=(TextView) findViewById(R.id.Resultado);
         rd1=(RadioButton) findViewById(R.id.yes);
         rd2=(RadioButton) findViewById(R.id.NO);
-       // tgbtn=(ToggleButton) findViewById(R.id.toggleButton);
+       tgbtn=(ToggleButton) findViewById(R.id.toggleButton);
 
         btnrd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,13 +37,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!(rd1.isChecked()&&rd2.isChecked()))
-                    Toast.makeText(getApplicationContext(), "Debe escoger una de las opciones", Toast.LENGTH_LONG).show();
+                    tvr.setText("Debes introducir alguna opc");
+            }
+        });
 
-                if (comprobar_bisiesto(Integer.parseInt((String) tv.getText()))) {
-                    tvr.setText("Error");
-                } else {
-                    tvr.setText("Correcto");
-                }
+        tgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
