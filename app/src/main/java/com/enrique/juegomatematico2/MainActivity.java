@@ -36,8 +36,22 @@ public class MainActivity extends AppCompatActivity {
         btnresultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!(rd1.isChecked()&&rd2.isChecked()))
+                if ((!rd1.isChecked()&&!rd2.isChecked()))
                     tvr.setText("Debes introducir alguna opc");
+                else{
+                    if (rd1.isChecked()&&comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                        tvr.setText("Correcto");
+                    }
+                    if (rd1.isChecked()&&!comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                        tvr.setText("Incorrecto");
+                    }
+                    if (rd2.isChecked()&&!comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                        tvr.setText("Correcto");
+                    }
+                    if (rd2.isChecked()&&comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                        tvr.setText("Incorrecto");
+                    }
+                }
             }
         });
         tgbtn.setOnClickListener(new View.OnClickListener() {
