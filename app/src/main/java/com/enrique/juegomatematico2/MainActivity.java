@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -35,28 +36,29 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText(String.valueOf((int)(Math.random()*(1950-2500)+2500)));
             }
         });
-
-        btnresultado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if ((!rd1.isChecked()&&!rd2.isChecked()))
-                    tvr.setText("Debes introducir alguna opc");
-                else{
-                    if (rd1.isChecked()&&comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
-                        tvr.setText("Correcto");
-                    }
-                    if (rd1.isChecked()&&!comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
-                        tvr.setText("Incorrecto");
-                    }
-                    if (rd2.isChecked()&&!comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
-                        tvr.setText("Correcto");
-                    }
-                    if (rd2.isChecked()&&comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
-                        tvr.setText("Incorrecto");
+            btnresultado.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if ((!rd1.isChecked()&&!rd2.isChecked()))
+                        //tvr.setText("Debes introducir alguna opc");
+                        Toast.makeText(MainActivity.this,"Debes introducir alguna opcion",Toast.LENGTH_LONG).show();
+                    else{
+                        if (rd1.isChecked()&&comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                            tvr.setText("Correcto");
+                        }
+                        if (rd1.isChecked()&&!comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                            tvr.setText("Incorrecto");
+                        }
+                        if (rd2.isChecked()&&!comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                            tvr.setText("Correcto");
+                        }
+                        if (rd2.isChecked()&&comprobar_bisiesto(Integer.parseInt((String) tv.getText()))){
+                            tvr.setText("Incorrecto");
+                        }
                     }
                 }
-            }
-        });
+            });
+
         sw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
