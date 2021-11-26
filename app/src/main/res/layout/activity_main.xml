@@ -88,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="29dp"
+        android:minHeight="48dp"
         android:text="off"
         app:layout_constraintBottom_toTopOf="@+id/Resultado"
         app:layout_constraintEnd_toEndOf="@+id/Resultado" />
